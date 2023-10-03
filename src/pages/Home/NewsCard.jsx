@@ -3,13 +3,16 @@
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ card }) => {
-  const { title, thumbnail_url, details, _id } = card;
+  const { title, image_url, details, _id } = card;
 
   return (
     <div>
       <div className="card mb-16  bg-base-100 shadow-xl">
         <figure>
-          <img src={thumbnail_url} />
+          <img
+            className="w-full"
+            src={image_url}
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}!</h2>
